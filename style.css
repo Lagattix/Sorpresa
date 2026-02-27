@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+#loading {
+    font-size: 2rem;
+    animation: pulse 1s infinite alternate;
+}
+
+#message {
+    display: none;
+    font-size: 15vw;
+    font-weight: 900;
+    color: #ff0000;
+    font-family: 'Creepster', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both infinite;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+}
+
+@keyframes pulse {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
